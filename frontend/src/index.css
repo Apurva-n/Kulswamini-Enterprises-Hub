@@ -1,0 +1,164 @@
+/* ============================================================
+   Google Fonts — Bodoni Moda, Hanken Grotesk, Material Symbols
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,600;0,700;1,600;1,700&family=Hanken+Grotesk:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
+
+/* ============================================================
+   Tailwind v4 – base import
+   ============================================================ */
+@import "tailwindcss";
+
+/* ============================================================
+   Design-system tokens (@theme replaces tailwind.config.js)
+   ============================================================ */
+@theme {
+  /* ---------- Colors ---------- */
+  --color-background:                    #f7f9fb;
+  --color-on-background:                 #191c1e;
+  --color-surface:                       #f7f9fb;
+  --color-surface-dim:                   #d8dadc;
+  --color-surface-bright:                #f7f9fb;
+  --color-surface-white:                 #ffffff;
+  --color-surface-tint:                  #565e74;
+  --color-surface-variant:               #e0e3e5;
+  --color-surface-container-lowest:      #ffffff;
+  --color-surface-container-low:         #f2f4f6;
+  --color-surface-container:             #eceef0;
+  --color-surface-container-high:        #e6e8ea;
+  --color-surface-container-highest:     #e0e3e5;
+
+  --color-primary:                       #000000;
+  --color-primary-container:             #131b2e;
+  --color-on-primary:                    #ffffff;
+  --color-on-primary-container:          #7c839b;
+  --color-primary-fixed:                 #dae2fd;
+  --color-primary-fixed-dim:             #bec6e0;
+  --color-on-primary-fixed:              #131b2e;
+  --color-on-primary-fixed-variant:      #3f465c;
+  --color-inverse-primary:               #bec6e0;
+
+  --color-secondary:                     #515f74;
+  --color-secondary-container:           #57657b;
+  --color-on-secondary:                  #ffffff;
+  --color-on-secondary-container:        #57657b;
+  --color-secondary-fixed:               #d5e3fd;
+  --color-secondary-fixed-dim:           #b9c7e0;
+  --color-on-secondary-fixed:            #0d1c2f;
+  --color-on-secondary-fixed-variant:    #3a485c;
+
+  --color-tertiary:                      #000000;
+  --color-tertiary-container:            #0d1c2d;
+  --color-on-tertiary:                   #ffffff;
+  --color-on-tertiary-container:         #768599;
+  --color-tertiary-fixed:                #d4e4fa;
+  --color-tertiary-fixed-dim:            #b9c8de;
+  --color-on-tertiary-fixed:             #0d1c2d;
+  --color-on-tertiary-fixed-variant:     #39485a;
+
+  --color-error:                         #ba1a1a;
+  --color-error-container:               #ffdad6;
+  --color-on-error:                      #ffffff;
+  --color-on-error-container:            #93000a;
+
+  --color-outline:                       #76777d;
+  --color-outline-variant:               #c6c6cd;
+  --color-on-surface:                    #191c1e;
+  --color-on-surface-variant:            #45464d;
+  --color-inverse-surface:               #2d3133;
+  --color-inverse-on-surface:            #eff1f3;
+
+  --color-steel-blue:                    #1E293B;
+  --color-oil-amber:                     #B45309;
+  --color-industrial-red:                #991B1B;
+
+  /* ---------- Border radius ---------- */
+  --radius-DEFAULT: 0.125rem;
+  --radius-lg:      0.25rem;
+  --radius-xl:      0.5rem;
+  --radius-full:    0.75rem;
+
+  /* ---------- Font families ---------- */
+  --font-family-headline-lg:        'Bodoni Moda', serif;
+  --font-family-headline-lg-mobile: 'Bodoni Moda', serif;
+  --font-family-display-lg:         'Bodoni Moda', serif;
+  --font-family-headline-md:        'Hanken Grotesk', sans-serif;
+  --font-family-label-md:           'Hanken Grotesk', sans-serif;
+  --font-family-label-sm:           'Hanken Grotesk', sans-serif;
+  --font-family-body-md:            'Hanken Grotesk', sans-serif;
+  --font-family-body-lg:            'Hanken Grotesk', sans-serif;
+
+  /* ---------- Font sizes (with line-height shorthand) ---------- */
+  --font-size-headline-lg:        32px;
+  --font-size-headline-lg-mobile: 24px;
+  --font-size-headline-md:        20px;
+  --font-size-display-lg:         48px;
+  --font-size-label-md:           14px;
+  --font-size-label-sm:           12px;
+  --font-size-body-md:            16px;
+  --font-size-body-lg:            18px;
+}
+
+/* ============================================================
+   Global base styles
+   ============================================================ */
+body {
+  background-color: #f7f9fb;
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #191c1e;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================================
+   Material Symbols baseline rendering
+   ============================================================ */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+/* ============================================================
+   Industrial branding overlay (left panel on Login page)
+   ============================================================ */
+.industrial-overlay {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.85) 0%, rgba(13, 28, 45, 0.95) 100%);
+}
+
+/* ============================================================
+   Error shake animation
+   ============================================================ */
+@keyframes shake {
+  10%, 90% { transform: translate3d(-1px, 0, 0); }
+  20%, 80% { transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+  40%, 60% { transform: translate3d(4px, 0, 0); }
+}
+
+.error-shake {
+  animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+/* ============================================================
+   Tailwind v4 custom utilities — typography helpers
+   (mirrors the font-* / text-* classes used in JSX)
+   ============================================================ */
+@utility font-headline-lg        { font-family: 'Bodoni Moda', serif;         font-size: 32px; font-weight: 600; line-height: 1.2; }
+@utility font-headline-lg-mobile { font-family: 'Bodoni Moda', serif;         font-size: 24px; font-weight: 600; line-height: 1.2; }
+@utility font-display-lg         { font-family: 'Bodoni Moda', serif;         font-size: 48px; font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; }
+@utility font-headline-md        { font-family: 'Hanken Grotesk', sans-serif; font-size: 20px; font-weight: 600; line-height: 1.4; letter-spacing: 0.01em; }
+@utility font-label-md           { font-family: 'Hanken Grotesk', sans-serif; font-size: 14px; font-weight: 600; line-height: 1.2; letter-spacing: 0.05em; }
+@utility font-label-sm           { font-family: 'Hanken Grotesk', sans-serif; font-size: 12px; font-weight: 500; line-height: 1.2; }
+@utility font-body-md            { font-family: 'Hanken Grotesk', sans-serif; font-size: 16px; font-weight: 400; line-height: 1.5; }
+@utility font-body-lg            { font-family: 'Hanken Grotesk', sans-serif; font-size: 18px; font-weight: 400; line-height: 1.6; }
+
+/* text-* size utilities that JSX uses directly */
+@utility text-headline-lg        { font-size: 32px; line-height: 1.2; }
+@utility text-headline-lg-mobile { font-size: 24px; line-height: 1.2; }
+@utility text-display-lg         { font-size: 48px; line-height: 1.1; }
+@utility text-headline-md        { font-size: 20px; line-height: 1.4; }
+@utility text-label-md           { font-size: 14px; line-height: 1.2; }
+@utility text-label-sm           { font-size: 12px; line-height: 1.2; }
+@utility text-body-md            { font-size: 16px; line-height: 1.5; }
+@utility text-body-lg            { font-size: 18px; line-height: 1.6; }
