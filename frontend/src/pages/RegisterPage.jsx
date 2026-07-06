@@ -41,7 +41,7 @@ export default function RegisterPage() {
             <div className="absolute inset-0 industrial-overlay"></div>
           </div>
           <div className="relative z-10">
-            <h1 className="font-headline-lg text-headline-lg text-on-primary tracking-tight">Bergen Fluid</h1>
+            <h1 className="font-headline-lg text-headline-lg text-on-primary tracking-tight">Kulswamini Enterprises</h1>
             <p className="font-label-md text-label-md text-on-primary-container mt-2 opacity-80">PRECISION DISTRIBUTION HUB</p>
           </div>
           <div className="relative z-10 mt-auto">
